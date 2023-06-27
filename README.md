@@ -16,10 +16,10 @@ git clone git@github.com:raspberrypi/pico-sdk.git --recurse-submodules
 ```sh
 git clone git@github.com:raspberrypi/pico-examples.git
 ```
-5. Generate makefiles:
+5. Generate makefiles in some empty folder not in the source tree:
 
 ```sh
-PICO_SDK_PATH=(path where Pico SDK was cloned) PICO_EXAMPLES_PATH=(path where Pico Examples was cloned) cmake ../pico-examples -DPICO_BOARD=adafruit_qtpy_rp2040 -DPICO_TOOLCHAIN_PATH=/Applications/ARM
+PICO_SDK_PATH=(path where Pico SDK was cloned) PICO_EXAMPLES_PATH=(path where Pico Examples was cloned) cmake (path to where this example repository was cloned) -DPICO_BOARD=adafruit_qtpy_rp2040 -DPICO_TOOLCHAIN_PATH=/Applications/ARM
 ```
 
 `/Applications/ARM` is probably where the ARM tools were installed to. If not, change the path.
